@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>w-rose</title>
+  <title>Tag: jQuery代码分析 | w-rose</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前端开发工程师，js爱好者。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="w-rose">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/jQuery代码分析/index.html">
 <meta property="og:site_name" content="w-rose">
 <meta property="og:description" content="前端开发工程师，js爱好者。">
 <meta name="twitter:card" content="summary">
@@ -146,107 +146,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-jsonp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/28/jsonp/">jsonp如何实现跨域</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/28/jsonp/" class="archive-article-date">
-  	<time datetime="2017-02-28T12:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-28</time>
-</a>
-        
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如果你能理解以下代码的执行结果，那么理解jsonp实现的跨域原理就是小菜一碟！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line">foo(<span class="number">123</span>);</div></pre></td></tr></table></figure></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    function foo(data) &#123;</div><div class="line">        console.log(data)</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;script src="test.js"&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>以上代码会在控制台上打印123。<br>其实jsonp实现跨域的原理就这么简单，利用script标签可以实现跨域的特性，你需要做的只有以下两件事<br>（1） 在全局定义一个函数<code>foo</code><br>（2） 和服务器约定好返回的字符串是<code>&quot;foo()&quot;</code><br>如何和服务器进行约定呢？<br>你的函数名可以随便定义，但是服务器代码总不能跟着你的函数名变化而变化，所以需要借助http协议告知服务器你的函数名，我们可以用查询字符串携带信息给服务器，一般我们会用<code>callback</code>来携带函数名。<br>这样你的script标签的src就类似下面这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"http://......?callback=foo"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>服务器就可以通过查询字符串中<code>callback</code>键取到函数名，返回字符串<code>callback + &quot;(123)&quot;</code><br>这样我们在foo里面想怎么使用data就都可以实现啦！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jsonp 跨域</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/28/jsonp/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-jQuery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/24/jQuery/">实现jQuery的核心结构</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/24/jQuery/" class="archive-article-date">
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/02/24/jQuery/" class="archive-article-date">
   	<time datetime="2017-02-24T09:25:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-24</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如果你是一个入门的前端工程师，那么你肯定知道jQuery，jQuery极大地方便了DOM操作，我们觉得它很强大，其实你自己可以实现这样的一个框架，这里我整理了一下自己的思路。</p>
-<h3 id="如何更快地获取DOM元素"><a href="#如何更快地获取DOM元素" class="headerlink" title="如何更快地获取DOM元素"></a>如何更快地获取DOM元素</h3><p>获取元素的方法很多，<code>document.getElementById(id)</code>、<code>document.getElementsByTagName(tagname)</code>、<code>document.getElementsByClassName(classname)</code>等等。<br>用原生的API获取元素无疑是很麻烦的，每获取一个元素需要写一长串，甚至还定位不到自己想要的那个元素。<br>html5中获取元素的API<code>document.querySelector(selector)</code>、<code>document.querySelectorAll(selector)</code>，虽然我们可以通过C3选择器更便捷地定位到目标元素，但是写起来还是很麻烦。<br>这时候，想到了封装函数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getEle</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">document</span>.querySelectorAll(selector);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这里返回的是一个NodeList结构的伪数组，如果是真数组，那我们操作起来不是更方便吗？<br>于是改进我们的函数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getEle</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">document</span>.querySelectorAll(selector));</div><div class="line">&#125;</div><div class="line"><span class="comment">//借用函数的call和apply方法将伪数组转化成真数组的技能一定要get</span></div></pre></td></tr></table></figure></p>
-<p>这样，既可以快速得获取元素，同时又可以用到数组的方法，我们可以这样来使用<code>getEle(&quot;div&quot;).forEach(...)</code><br>但是获取到的结果只能用到数组的方法，远远不够，我们还想让它有操作dom、修改样式等等方法。<br>每一个返回的对象都拥有同样的方法，这个时候想到了构造函数。</p>
-<h3 id="init构造函数"><a href="#init构造函数" class="headerlink" title="init构造函数"></a>init构造函数</h3><p>通过构造函数创建出来的对象可以访问构造函数原型上的成员。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> init = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">  <span class="built_in">Array</span>.push.apply(<span class="keyword">this</span>, <span class="built_in">document</span>.querySelectorAll(selector));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这样我们通过给<code>init.prototype</code>添加成员，返回的对象都可以访问到。<br>问题又来了，难道每次获取元素都要用<code>new init(selector)</code>吗？你能想到什么办法去解决这个问题吗？</p>
-<h3 id="jQuery-包装函数"><a href="#jQuery-包装函数" class="headerlink" title="jQuery($)包装函数"></a>jQuery($)包装函数</h3><p>使用一个写法便捷的函数执行<code>new init(selector)</code>并暴露给用户，于是就有了以下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">window</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> init = <span class="function"><span class="keyword">function</span> (<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="built_in">Array</span>.push.apply(<span class="keyword">this</span>, <span class="built_in">document</span>.querySelectorAll(selector));</div><div class="line">  &#125;</div><div class="line">  init.prototype = &#123;...&#125;</div><div class="line">  <span class="keyword">var</span> jQuery = <span class="function"><span class="keyword">function</span> (<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> init(selector);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">window</span>.jQuery = <span class="built_in">window</span>.$ = jQuery;</div><div class="line">&#125;)(<span class="built_in">window</span>);</div></pre></td></tr></table></figure></p>
-<p>这样初步雏形就有了，你一直以为你用的是jQuery对象，但其实init构造函数才是功臣。<br>但是又出现了问题，如何去给jQuery对象拓展方法？要拓展方法必定是要在其原型上添加，但构造函数并没有暴露，你能想到什么方法吗？</p>
-<h3 id="将构造函数挂载在jQuery的原型上"><a href="#将构造函数挂载在jQuery的原型上" class="headerlink" title="将构造函数挂载在jQuery的原型上"></a>将构造函数挂载在jQuery的原型上</h3>
-      
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/02/24/jQuery/">实现jQuery的核心结构</a>
+    </h1>
+  
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -258,88 +185,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/24/jQuery/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-
-
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/07/hello-world/" class="archive-article-date">
-  	<time datetime="2017-02-07T01:58:59.437Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/07/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -361,10 +219,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
